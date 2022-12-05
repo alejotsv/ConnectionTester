@@ -23,6 +23,7 @@ public class ConnectionTester extends JFrame {
             URL page = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) page.openConnection();
             String  response = connection.getResponseMessage();
+            System.out.println(response);
             text = response;
             InputStreamReader in = new InputStreamReader((InputStream) connection.getContent());
             BufferedReader buffer = new BufferedReader(in);
